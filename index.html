@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Sudoku</title>
+  </head>
+  <body>
+    <div class="container form mt-5">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-5 border border-primary">
+          <form
+            action="./welcome.html"
+            name="myForm"
+            onsubmit="return validation()"
+          >
+            <div class="form-group">
+              <h1 id="soduko_title" align="center">Sodoku</h1>
+
+              <input
+                value=""
+                placeholder="User name"
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <span id="user_massage"></span>
+            <div class="form-group">
+              <input
+                name="password"
+                value=""
+                placeholder="password"
+                type="password"
+                class="form-control"
+              />
+            </div>
+            <span id="pass_massage"></span>
+            <div class="text-center enter-div">
+              <button type="submit" class="btn btn-primary mt-4" id="enter">
+                Enter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
