@@ -70,3 +70,22 @@ body {
   font-size: 50px;
 }
 /**************************************/
+
+/* board 9x9 */
+
+#large {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
+.board-square {
+  border: 1px solid rgb(10, 10, 10);
+  flex: 1 0 10%; /* explanation below */
+  height: 40px;
+  padding-top: 15px;
+  font-size: 25px;
+}
