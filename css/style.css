@@ -1,17 +1,31 @@
+/*index*/
 .enter-div {
   margin-bottom: 30px;
 }
-
-#enter {
-  font-size: 45px;
-}
-
 #soduko_title {
   font-size: 60px;
 }
 
+/*board*/
+.button-board button {
+  font-size: 45px;
+  font-family: "MuseoModerno", cursive;
+  margin-top: 13px;
+}
+
+.board-title {
+  font-size: 50px;
+  text-align: center;
+  margin: -20px -63px -83px -60px;
+}
+/*welcome*/
+#enter {
+  font-size: 45px;
+}
+
 body {
   background-color: rgb(214, 211, 211);
+  font-family: "MuseoModerno", cursive;
 }
 
 /* validation errors */
@@ -44,7 +58,6 @@ body {
 }
 
 .item1 {
-  border: 1px solid black;
   margin-top: 20px;
   margin-left: 75px;
   margin-right: 75px;
@@ -53,39 +66,38 @@ body {
 }
 
 .item2 {
-  border: 1px solid black;
   text-align: center;
   padding: 10px;
   margin-left: 80px;
   margin-right: 80px;
-  margin-bottom: 15px;
-  padding-top: 20px;
+  margin-bottom: 51px;
 }
 
 .level {
   display: inline-block;
-  border: 1px solid black;
   width: 100px;
   padding: 10px;
   font-size: 50px;
+  background-color: #00eeff;
+  color: azure;
 }
 /**************************************/
 
 /* board 9x9 */
 
 #large {
+  width: 653px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  width: 500px;
-  text-align: center;
   margin: auto;
+  color: #020607;
 }
 .board-square {
   border: 1px solid rgb(10, 10, 10);
-  flex: 1 0 10%; /* explanation below */
-  height: 40px;
-  padding-top: 15px;
-  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 22px;
 }

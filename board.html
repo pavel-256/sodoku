@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>                
+    <h1 class="board-title">Let's play sodoku!</h1>
+    <div class="box" id="box">
+      <div class="item item1">Welcome abcd</div>
+      <div class="item item2">Level difficulty</div>
+      <div class="item item3">
+        <button onclick="random(70)"  class="btn btn-info level">3</button>
+        <button onclick="random(40)"  class="btn btn-info level">2</button>
+        <button onclick="random(25)"  class="btn btn-info level">1</button>
+
+      </div>
+    </div>
+    <div id="button_board" class="button-board">
+      <button  onclick="func()" >Finish</button>
+      <button  onclick="back()" >Back</button>
+      <button  onclick="reset()" >Reset</button>
+    </div>
+      <div id="large"></div>
+    </div>
+    
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

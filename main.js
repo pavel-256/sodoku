@@ -1,10 +1,6 @@
-import { generateBoard, func } from "./components/board.js";
+import { func, random, reset, back } from "./components/board.js";
 
-let board = document.getElementById("large");
-
-generateBoard(board);
-
-/////////////////////////////////////////
-
+window.back = back;
+window.reset = reset;
 window.func = func;
-window.generateBoard = generateBoard;
+window.random = random;
