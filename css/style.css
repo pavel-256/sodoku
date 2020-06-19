@@ -11,12 +11,15 @@
   font-size: 45px;
   font-family: "MuseoModerno", cursive;
   margin-top: 13px;
+  background-color: #007bff;
+  color: white;
+  border: 1px solid white;
 }
 
 .board-title {
   font-size: 50px;
   text-align: center;
-  margin: -20px -63px -83px -60px;
+  margin: -11px -63px -83px -60px;
 }
 /*welcome*/
 #enter {
@@ -78,8 +81,9 @@ body {
   width: 100px;
   padding: 10px;
   font-size: 50px;
-  background-color: #00eeff;
+  background-color: #007bff;
   color: azure;
+  border: none;
 }
 /**************************************/
 

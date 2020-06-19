@@ -1,6 +1,10 @@
 /* the Board Module:  9*9 board
  */
 
+let name = document.cookie;
+console.log(name); // save the user name on cookie and dispaly it at the title
+document.getElementById("newName").innerHTML = "Welcome Back " + name + " !";
+
 let matrixTest = [
   ["8", "9", "5", "7", "4", "2", "1", "3", "6"],
   ["2", "7", "1", "9", "6", "3", "4", "8", "5"],
@@ -42,6 +46,7 @@ let reset = () => {
 };
 
 let back = () => {
+  // the back button
   window.location.reload();
 };
 
@@ -55,8 +60,9 @@ let back = () => {
  *
  */
 let random = (m) => {
-  document.getElementById("box").style.display = "none";
-  document.getElementById("button_board").style.display = "block";
+  document.cookie = name + "=; Max-Age=0"; // delete cookie for new user
+  document.getElementById("box").style.display = "none"; // welcome not visible
+  document.getElementById("button_board").style.display = "block"; // board visible
   let counter = 0;
   while (counter < m) {
     // increse the empty fields
@@ -70,7 +76,7 @@ let random = (m) => {
       // empty element change with empty string
       matrixOrigin[test1][test2] = " ";
     }
-    counter++; // count the nuber of deleted fields
+    counter++; // count the number of deleted fields
     console.log(counter);
   }
 
@@ -87,7 +93,7 @@ let random = (m) => {
   for (let col = 0; col < 9; col++) {
     for (let row = 0; row < 9; row++) {
       board.insertAdjacentHTML(
-        "beforeend", // put html elelments in JSs
+        "beforeend", // create html elelments in JS
         `<input type='number' min='1' max='9' value='${matrixOrigin[col][row]}'    name='sodokuField' id='field' class='board-square'/> </form> `
       );
     }
@@ -96,7 +102,7 @@ let random = (m) => {
 
 /**
  *
- *  The final function to compare betwin user and original matrix - JSON.stringify
+ *  The final function to compare beetwin user and original matrix - JSON.stringify
  *
  *  Takes NodeList Object From getElementsByName attr of filtered martix
  *  and build a analogic matrix  as original to compare - user types the miised elements
@@ -108,9 +114,10 @@ let random = (m) => {
  */
 
 let func = () => {
-  var nodeList = document.getElementsByName("sodokuField");
-  var arr = []; // new arr with all elememts
-  for (var index = 0; index < nodeList.length; index++) {
+  // when user fill all missed places
+  let nodeList = document.getElementsByName("sodokuField"); // 81 elements with this name atribute
+  let arr = []; // new arr with all elememts
+  for (let index = 0; index < nodeList.length; index++) {
     let final = nodeList[index].value;
     arr.push(final);
   }
@@ -122,7 +129,7 @@ let func = () => {
     matrixUser.push(arr.splice(0, 9));
   }
 
-  console.log(matrixUser); //  the new arr eith user inputs
+  console.log(matrixUser); //  the new arr with user inputs
   console.log(matrixTest); // the original array
 
   let isEqual = JSON.stringify(matrixTest) === JSON.stringify(matrixUser);
@@ -148,6 +155,6 @@ let func = () => {
   return true;
   // relocate to welcome page*/
 };
-
+// the first possition when threr is only levels dislpayed
 document.getElementById("button_board").style.display = "none";
 export { func, random, reset, back };
