@@ -68,13 +68,13 @@ let random = (m) => {
     // increse the empty fields
     let test1 = Math.floor(Math.random() * 9); // random numbers 0-9
     let test2 = Math.floor(Math.random() * 9);
-    console.log(test2); // could be 5
-    console.log(test1); //  could be 7
+    console.log(test2); // could be 5 for example
+    console.log(test1); //  could be 7 for example
     let index = delete matrixOrigin[test1][test2];
     if (index) {
       // delete random element everey itaration
       // empty element change with empty string
-      matrixOrigin[test1][test2] = " ";
+      matrixOrigin[test1][test2] = " "; // space
     }
     counter++; // count the number of deleted fields
     console.log(counter);
@@ -145,12 +145,13 @@ let func = () => {
     alert("Please fill the empty fields");
     return false;
   } else if (isEqual === false) {
-    alert("Try again!");
-    return false;
+    alert("You failed, try next time!");
+    window.location.replace("./board.html");
+    return true;
   }
   if (isEqual === true) {
   }
-  alert("OK");
+  alert("You won!");
   window.location.replace("./board.html");
   return true;
   // relocate to welcome page*/
